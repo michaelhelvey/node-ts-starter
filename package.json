@@ -17,7 +17,7 @@
 		"test": "vitest",
 		"test:coverage": "vitest --coverage",
 		"lint": "eslint src --cache --ext .js,.jsx,.ts,.tsx",
-		"build": "tsup-node ./src/index.ts --format esm,cjs --dts",
+		"build": "tsup-node ./src/index.ts --format esm,cjs --dts --target=es2021 --clean",
 		"format": "prettier --write src/**/*.ts",
 		"typecheck": "tsc --noEmit",
 		"prepare": "husky install"
