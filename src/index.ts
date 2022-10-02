@@ -1,6 +1,7 @@
-type A<B> = { a: B }
+export * from './lib.js'
 
-function foo(bar: A<string>) {
-	console.log(bar.a)
+type Message<T> = { content: T }
+
+export function foo(bar: Message<string>) {
+	console.log(bar.content)
 }
-console.log('hi')
