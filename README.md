@@ -1,5 +1,7 @@
 # Node.js + Typescript Starter Pack
 
+![build](https://github.com/michaelhelvey/node-ts-starter/actions/workflows/nodejs.yml/badge.svg)
+
 This is my personal typescript library starter kit. Here's the stack:
 
 -   `vitest` for testing
