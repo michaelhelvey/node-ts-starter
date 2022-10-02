@@ -1,43 +1,57 @@
 {
-	"name": "ts-lisp",
+	"name": "node-ts-starter",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "Node.JS + Typescript Starter Pack",
+	"sideEffects": false,
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs"
+		}
+	},
 	"scripts": {
 		"start": "node ./dist/index.js",
-		"dev": "ts-node ./src/index.ts",
+		"dev": "tsx ./src/index.ts",
 		"test": "vitest",
 		"test:coverage": "vitest --coverage",
 		"lint": "eslint src --cache --ext .js,.jsx,.ts,.tsx",
-		"build": "swc ./src -d dist --ignore **/*.spec.ts",
+		"build": "tsup-node ./src/index.ts --format esm,cjs --dts",
 		"format": "prettier --write src/**/*.ts",
-		"type-check": "tsc --noEmit",
+		"typecheck": "tsc --noEmit",
 		"prepare": "husky install"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@swc/cli": "^0.1.57",
-		"@swc/core": "^1.2.162",
-		"@swc/jest": "^0.2.20",
-		"@types/node": "^17.0.23",
-		"@typescript-eslint/eslint-plugin": "^5.17.0",
-		"@typescript-eslint/parser": "^5.17.0",
-		"@vitest/coverage-c8": "^0.23.4",
-		"eslint": "^8.12.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-node": "^11.1.0",
-		"husky": "^8.0.1",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.6.1",
-		"ts-node": "^10.7.0",
-		"typescript": "^4.6.3",
-		"vitest": "^0.23.4"
+	"author": {
+		"name": "Michael Helvey",
+		"email": "michael.helvey1@gmail.com",
+		"url": "https://michaelhelvey.dev"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=16.0.0"
 	},
 	"lint-staged": {
 		"src/**/*.ts": "prettier --write",
 		"*.{js,jsx,ts,tsx}": "eslint --cache --fix",
 		"*.{ts,js,json}": "prettier --write"
+	},
+	"devDependencies": {
+		"@types/node": "^18.7.23",
+		"@typescript-eslint/eslint-plugin": "^5.38.1",
+		"@typescript-eslint/parser": "^5.38.1",
+		"@vitest/coverage-c8": "^0.23.4",
+		"eslint": "^8.24.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-jest": "^27.0.4",
+		"eslint-plugin-node": "^11.1.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"tsup": "^6.2.3",
+		"tsx": "^3.9.0",
+		"typescript": "4.8.4",
+		"vitest": "^0.23.4"
 	}
 }
