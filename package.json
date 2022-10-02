@@ -20,6 +20,7 @@
 		"build": "tsup-node ./src/index.ts --format esm,cjs --dts --target=es2021 --clean",
 		"format": "prettier --write src/**/*.ts",
 		"typecheck": "tsc --noEmit",
+		"validate": "pnpm lint && pnpm test -- run && pnpm typecheck && pnpm build",
 		"prepare": "husky install"
 	},
 	"keywords": [],
@@ -52,6 +53,8 @@
 		"tsup": "^6.2.3",
 		"tsx": "^3.9.0",
 		"typescript": "4.8.4",
+		"vite": "^3.1.4",
+		"vite-tsconfig-paths": "^3.5.1",
 		"vitest": "^0.23.4"
 	}
 }

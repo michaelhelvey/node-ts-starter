@@ -1,5 +1,13 @@
 const typescriptEslintPlugin = require('@typescript-eslint/eslint-plugin')
 
+// Disable typescript linting rules for certain kinds of files
+const permissiveTypescriptRules = Object.keys(
+	typescriptEslintPlugin.rules
+).reduce((table, rule) => {
+	table[`@typescript-eslint/${rule}`] = ['off']
+	return table
+}, {})
+
 /** @type {import('@types/eslint').Linter.BaseConfig}*/
 module.exports = {
 	root: true,
@@ -30,14 +38,7 @@ module.exports = {
 		{
 			files: ['*.test.*'],
 			rules: {
-				// Be extremely permissive about our use of typescript in test files
-				...Object.keys(typescriptEslintPlugin.rules).reduce(
-					(table, rule) => {
-						table[`@typescript-eslint/${rule}`] = ['off']
-						return table
-					},
-					{}
-				),
+				...permissiveTypescriptRules,
 			},
 		},
 	],
