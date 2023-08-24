@@ -16,6 +16,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		tsconfigRootDir: __dirname,
 		project: ['./tsconfig.json'],
+		warnOnUnsupportedTypeScriptVersion: false
 	},
 	plugins: ['@typescript-eslint', 'jest'],
 	extends: [
