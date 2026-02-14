@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "proseWrap": "always",
+  "singleQuote": false,
+  "semi": true,
+  "trailingComma": "all",
+  "useTabs": false,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "importOrder": ["^node:.*$", "<THIRD_PARTY_MODULES>", "^[./]"],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true,
+  "experimentalSortPackageJson": false,
+  "ignorePatterns": []
+}

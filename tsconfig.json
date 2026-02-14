@@ -5,11 +5,12 @@
     "moduleResolution": "nodenext",
     "module": "nodenext",
     "allowImportingTsExtensions": true,
-    "erasableSyntaxOnly": true,
+    "erasableSyntaxOnly": false,
 
     // strict type-checking options
     "strict": true,
     "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
 
     // misc:
     "noEmit": true,
