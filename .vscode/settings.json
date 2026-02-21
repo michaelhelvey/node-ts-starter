@@ -6,5 +6,6 @@
     "source.fixAll.eslint": "always",
     "source.removeUnusedImports": "never"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.experimental.useTsgo": true
 }

@@ -1,6 +1,6 @@
 {
   "name": "@michaelhelvey/node-ts-starter",
-  "description": "nodejs starter project",
+  "description": "opinionated starter template for node.js libraries in typescript",
   "version": "1.0.0",
   "type": "module",
   "sideEffects": false,
@@ -14,10 +14,8 @@
     "url": "https://github.com/michaelhelvey"
   },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist",
@@ -32,28 +30,31 @@
   },
   "scripts": {
     "prepare": "lefthook install",
+    "dev": "nodemon -q -I --exec node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
     "test": "vitest",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --type-aware --typecheck .",
+    "lint:fix": "oxlint --fix --fix-suggestions --fix-dangerously .",
     "fmt": "oxfmt",
     "build": "tsdown"
   },
-  "packageManager": "pnpm@10.29.3",
+  "packageManager": "pnpm@10.30.0",
   "devDependencies": {
-    "@eslint/compat": "2.0.2",
-    "@eslint/core": "^1.1.0",
-    "@eslint/js": "^9.39.2",
-    "@trivago/prettier-plugin-sort-imports": "6.0.2",
-    "@types/node": "25.2.3",
+    "@arethetypeswrong/core": "0.18.2",
+    "@swc/core": "1.15.11",
+    "@types/node": "25.3.0",
+    "@typescript/native-preview": "7.0.0-dev.20260220.1",
     "@vitest/coverage-v8": "4.0.18",
-    "eslint": "9.39.2",
-    "jiti": "2.6.1",
+    "eslint-plugin-perfectionist": "5.6.0",
+    "eslint-plugin-unused-imports": "4.4.1",
     "lefthook": "2.1.1",
-    "oxfmt": "^0.32.0",
+    "nodemon": "3.1.14",
+    "oxfmt": "0.34.0",
+    "oxlint": "1.49.0",
+    "oxlint-tsgolint": "0.14.2",
     "prettier": "3.8.1",
+    "ts-node": "10.9.2",
     "tsdown": "0.20.3",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.55.0",
     "vitest": "4.0.18"
   }
 }

@@ -7,9 +7,17 @@
   "useTabs": false,
   "printWidth": 100,
   "tabWidth": 2,
-  "importOrder": ["^node:.*$", "<THIRD_PARTY_MODULES>", "^[./]"],
-  "importOrderSeparation": false,
-  "importOrderSortSpecifiers": true,
+  "experimentalSortImports": {
+    "groups": [
+      "type-import",
+      ["value-builtin", "value-external"],
+      "type-internal",
+      "value-internal",
+      ["type-parent", "type-sibling", "type-index"],
+      ["value-parent", "value-sibling", "value-index"],
+      "unknown"
+    ]
+  },
   "experimentalSortPackageJson": false,
   "ignorePatterns": []
 }
