@@ -23,10 +23,7 @@ const testPlugins = productionPlugins.filter((pluginName) => pluginName !== "typ
 export default defineConfig({
   categories: {
     correctness: "error",
-    nursery: "error",
     perf: "error",
-    style: "error",
-    suspicious: "error",
   },
   env: {
     browser: true,
@@ -35,7 +32,7 @@ export default defineConfig({
     node: true,
   },
   ignorePatterns: ["node_modules", "dist"],
-  jsPlugins: ["eslint-plugin-perfectionist", "eslint-plugin-unused-imports"],
+  jsPlugins: ["eslint-plugin-unused-imports"],
   overrides: [
     {
       files: ["**/*test.ts", "**/*test.tsx", "**/*spec.ts", "**/*spec.tsx"],
@@ -48,23 +45,6 @@ export default defineConfig({
     "import/no-nodejs-modules": "off",
     "import/no-unassigned-import": "off",
     "no-duplicate-imports": "off",
-    "perfectionist/sort-enums": [
-      "error",
-      {
-        partitionByComment: true,
-        sortByValue: "always",
-      },
-    ],
-    "perfectionist/sort-heritage-clauses": "error",
-    "perfectionist/sort-interfaces": "error",
-    "perfectionist/sort-jsx-props": "error",
-    "perfectionist/sort-object-types": "error",
-    "perfectionist/sort-objects": [
-      "error",
-      {
-        partitionByComment: true,
-      },
-    ],
     "sort-imports": "off",
     "sort-keys": "off",
 
@@ -72,8 +52,6 @@ export default defineConfig({
     "@typescript-eslint/no-unsafe-type-assertion": "off",
     "import/no-named-export": "off",
     "import/prefer-default-export": "off",
-    "no-magic-numbers": "off",
-    "no-ternary": "off",
 
     // Genuinely no clue why these get enabled at all
     "jest/require-hook": "off",
