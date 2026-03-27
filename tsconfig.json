@@ -14,7 +14,10 @@
     // misc:
     "noEmit": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    // Typescript 6 types configuration
+    "types": ["node"]
   },
   "ts-node": {
     "transpileOnly": true,

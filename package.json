@@ -1,21 +1,16 @@
 {
   "name": "@michaelhelvey/node-ts-starter",
-  "description": "opinionated starter template for node.js libraries in typescript",
   "version": "1.0.0",
-  "type": "module",
-  "sideEffects": false,
+  "description": "opinionated starter template for node.js libraries in typescript",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Helvey",
+    "email": "michael.helvey1@gmail.com",
+    "url": "https://github.com/michaelhelvey"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/michaelhelvey/node-ts-starter"
-  },
-  "author": {
-    "email": "michael.helvey1@gmail.com",
-    "name": "Michael Helvey",
-    "url": "https://github.com/michaelhelvey"
-  },
-  "exports": {
-    ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
   },
   "files": [
     "dist",
@@ -24,37 +19,35 @@
     "package.json",
     "tsconfig.json"
   ],
-  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "prepare": "vp config",
+    "dev": "nodemon -q -I --exec node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
+    "start": "node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
+    "test": "vp test",
+    "lint": "vp check --fix",
+    "fmt": "vp fmt",
+    "build": "vp pack",
+    "validate": "pnpm build && pnpm lint && pnpm test --run"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "0.18.2",
+    "@michaelhelvey/vite-config": "^1.0.1",
+    "@swc/core": "1.15.21",
+    "@types/node": "25.5.0",
+    "@vitest/coverage-v8": "4.1.2",
+    "nodemon": "3.1.14",
+    "ts-node": "10.9.2",
+    "typescript": "6.0.2",
+    "vite-plus": "^0.1.14"
+  },
   "engines": {
     "node": ">=24"
   },
-  "scripts": {
-    "prepare": "lefthook install",
-    "dev": "nodemon -q -I --exec node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
-    "start": "node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
-    "test": "vitest",
-    "lint": "oxlint --type-aware --type-check .",
-    "lint:fix": "oxlint --fix --fix-suggestions --fix-dangerously .",
-    "fmt": "oxfmt",
-    "build": "tsdown",
-    "validate": "pnpm build && pnpm lint && pnpm test --run"
-  },
-  "packageManager": "pnpm@10.30.3",
-  "devDependencies": {
-    "@arethetypeswrong/core": "0.18.2",
-    "@swc/core": "1.15.18",
-    "@types/node": "25.5.0",
-    "@typescript/native-preview": "7.0.0-dev.20260318.1",
-    "@vitest/coverage-v8": "4.1.0",
-    "lefthook": "2.1.4",
-    "nodemon": "3.1.14",
-    "oxfmt": "0.41.0",
-    "oxlint": "1.56.0",
-    "oxlint-tsgolint": "0.17.0",
-    "prettier": "3.8.1",
-    "ts-node": "10.9.2",
-    "tsdown": "0.21.4",
-    "typescript": "5.9.3",
-    "vitest": "4.1.0"
-  }
+  "packageManager": "pnpm@10.30.3"
 }
