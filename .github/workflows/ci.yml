@@ -19,6 +19,4 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "pnpm"
       - run: pnpm install --prefer-offline
-      - run: pnpm run lint
-      - run: pnpm run typecheck
-      - run: pnpm run test
+      - run: pnpm validate
