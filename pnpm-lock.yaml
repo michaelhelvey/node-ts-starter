@@ -12,8 +12,8 @@ importers:
         specifier: 0.18.2
         version: 0.18.2
       '@michaelhelvey/vite-config':
-        specifier: ^1.0.1
-        version: 1.0.1(vite-plus@0.1.14(@arethetypeswrong/core@0.18.2)(@types/node@25.5.0)(typescript@6.0.2)(vite@8.0.3(@types/node@25.5.0)))
+        specifier: ^1.0.2
+        version: 1.0.2(vite-plus@0.1.14(@arethetypeswrong/core@0.18.2)(@types/node@25.5.0)(typescript@6.0.2)(vite@8.0.3(@types/node@25.5.0)))
       '@swc/core':
         specifier: 1.15.21
         version: 1.15.21
@@ -98,8 +98,8 @@ packages:
   '@loaderkit/resolve@1.0.4':
     resolution: {integrity: sha512-rJzYKVcV4dxJv+vW6jlvagF8zvGxHJ2+HTr1e2qOejfmGhAApgJHl8Aog4mMszxceTRiKTTbnpgmTO1bEZHV/A==}
 
-  '@michaelhelvey/vite-config@1.0.1':
-    resolution: {integrity: sha512-nvsT6XLwdNNA0EIH0ikY8JMMAVI8nBQxGMLfNTwtJJtMXDKph6Elpib5pIZNnnt+lSKRkY6xwg1pZVp17KixbA==}
+  '@michaelhelvey/vite-config@1.0.2':
+    resolution: {integrity: sha512-ijjjk3CPW6+1DkhHfOHpKAtqjawhaawLMZK+WxcWNZlgKIHHDW3bcfw6fMk8qt5pDAar3mHXpfK15Nl5fqiJUg==}
     peerDependencies:
       vite-plus: ^0.1.14
 
@@ -1425,7 +1425,7 @@ snapshots:
     dependencies:
       '@braidai/lang': 1.1.2
 
-  '@michaelhelvey/vite-config@1.0.1(vite-plus@0.1.14(@arethetypeswrong/core@0.18.2)(@types/node@25.5.0)(typescript@6.0.2)(vite@8.0.3(@types/node@25.5.0)))':
+  '@michaelhelvey/vite-config@1.0.2(vite-plus@0.1.14(@arethetypeswrong/core@0.18.2)(@types/node@25.5.0)(typescript@6.0.2)(vite@8.0.3(@types/node@25.5.0)))':
     dependencies:
       vite-plus: 0.1.14(@arethetypeswrong/core@0.18.2)(@types/node@25.5.0)(typescript@6.0.2)(vite@8.0.3(@types/node@25.5.0))
 
