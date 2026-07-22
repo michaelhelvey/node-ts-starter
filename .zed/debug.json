@@ -1,0 +1,11 @@
+[
+  {
+    "adapter": "JavaScript",
+    "label": "Debug Typescript Program",
+    "request": "launch",
+    "type": "node",
+    "runtimeExecutable": "./node_modules/.bin/tsx",
+    "program": "./src/index.ts",
+    "skipFiles": ["<node_internals>/**"],
+  },
+]

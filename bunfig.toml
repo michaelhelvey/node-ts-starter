@@ -1,6 +1,0 @@
-[install]
-peer = true
-exact = true
-
-[test]
-root = "./packages/e2e"

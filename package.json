@@ -1,23 +1,16 @@
 {
   "name": "@michaelhelvey/node-ts-starter",
-  "description": "nodejs starter project",
   "version": "1.0.0",
-  "type": "module",
-  "sideEffects": false,
+  "description": "nodejs starter project",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Helvey",
+    "email": "michael.helvey1@gmail.com",
+    "url": "https://github.com/michaelhelvey"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/michaelhelvey/node-ts-starter"
-  },
-  "author": {
-    "email": "michael.helvey1@gmail.com",
-    "name": "Michael Helvey",
-    "url": "https://github.com/michaelhelvey"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
   },
   "files": [
     "dist",
@@ -26,34 +19,32 @@
     "package.json",
     "tsconfig.json"
   ],
-  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "prepare": "vp config",
+    "dev": "tsx --watch ./src/index.ts",
+    "test": "vp test",
+    "lint": "vp lint --fix",
+    "fmt": "vp fmt",
+    "build": "vp pack"
+  },
+  "devDependencies": {
+    "@michaelhelvey/vite-config": "2.0.2",
+    "@types/node": "26.1.1",
+    "@vitest/coverage-v8": "4.1.10",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
+    "vite-plus": "^0.2.5"
+  },
   "engines": {
     "node": ">=24"
   },
-  "scripts": {
-    "prepare": "lefthook install",
-    "test": "vitest",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "fmt": "oxfmt",
-    "build": "tsdown"
-  },
-  "packageManager": "pnpm@10.29.3",
-  "devDependencies": {
-    "@eslint/compat": "2.0.2",
-    "@eslint/core": "^1.1.0",
-    "@eslint/js": "^9.39.2",
-    "@trivago/prettier-plugin-sort-imports": "6.0.2",
-    "@types/node": "25.2.3",
-    "@vitest/coverage-v8": "4.0.18",
-    "eslint": "9.39.2",
-    "jiti": "2.6.1",
-    "lefthook": "2.1.1",
-    "oxfmt": "^0.32.0",
-    "prettier": "3.8.1",
-    "tsdown": "0.20.3",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.55.0",
-    "vitest": "4.0.18"
-  }
+  "packageManager": "pnpm@11.16.0+sha512.b767e9a98fc87aec0f42daefcd0e84941c2cdb45d73c4e1e68860fb2bdfdbe032ab592105479e5e05c237f740c8a5ffdbbb52385797ddc2296745a1bbb883e8d"
 }
