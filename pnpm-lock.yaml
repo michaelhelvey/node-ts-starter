@@ -162,13 +162,17 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  vite@*: npm:@voidzero-dev/vite-plus-core@1.3.0
+  vitest@*: 5.0.5
+
 importers:
 
   .:
     devDependencies:
       '@michaelhelvey/vite-config':
-        specifier: 2.0.4
-        version: 2.0.4(vite-plus@1.3.0(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(@vitest/ui@5.0.5)(esbuild@0.28.2)(tsx@4.23.15)(typescript@7.0.2))
+        specifier: 2.0.6
+        version: 2.0.6(vite-plus@1.3.0(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(@vitest/ui@5.0.5)(esbuild@0.28.2)(tsx@4.23.15)(typescript@7.0.2))
       '@types/node':
         specifier: 26.6.5
         version: 26.6.5
@@ -182,7 +186,7 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
       vite-plus:
-        specifier: ^1.3.0
+        specifier: 1.3.0
         version: 1.3.0(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(@vitest/ui@5.0.5)(esbuild@0.28.2)(tsx@4.23.15)(typescript@7.0.2)
 
 packages:
@@ -385,10 +389,10 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@michaelhelvey/vite-config@2.0.4':
-    resolution: {integrity: sha512-utyu2KhTDwCzPJ8KRh+84YZw/zoKaRRSP/AgQAVvEehvSGA/5P9OjBo8+5dD4WinFGp7mOObQ/D9Ovnno9aSkg==}
+  '@michaelhelvey/vite-config@2.0.6':
+    resolution: {integrity: sha512-Frij+Q3Rjj955Tv9owLZxHWiA9bAXNqcSY8Yzvrga/MHgUGh8SaHVBRkpHzYWUnemRCPh2lJz9+UkUOzjx0zAQ==}
     peerDependencies:
-      vite-plus: ^1.1.0
+      vite-plus: ^1.3.0
 
   '@oxc-project/runtime@0.154.0':
     resolution: {integrity: sha512-cBQNGoh659BNgvA8OC/e4BNDtFkv03dJaYdkp2adgOQNtISNAPQ+nB4S8XvWtNk7Xl+0g+7aa+iRGR25Xycd1Q==}
@@ -1619,7 +1623,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@michaelhelvey/vite-config@2.0.4(vite-plus@1.3.0(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(@vitest/ui@5.0.5)(esbuild@0.28.2)(tsx@4.23.15)(typescript@7.0.2))':
+  '@michaelhelvey/vite-config@2.0.6(vite-plus@1.3.0(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(@vitest/ui@5.0.5)(esbuild@0.28.2)(tsx@4.23.15)(typescript@7.0.2))':
     dependencies:
       execa: 10.1.1
       lodash.merge: 4.6.2
